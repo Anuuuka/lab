@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    float fahr, celsius, kelvin, value ;
+
+
+     printf("Enter value: ");
+     scanf("%f",&value);
+     printf("Enter symbol f - Fahrenheit, c- celsius, k- kelvin\n if no choice press enter  \n");
+    getchar();
+    char a = getchar();
+
+     switch(a){
+
+ case 'f':
+
+
+     kelvin=(value- 32) * 5/9 + 273.15;
+     celsius=5*(value-32)/9;
+     printf("\nfahr  %.0f F\n",value);
+     printf("kelvin=  %.2fK\n",kelvin);
+     printf("celsius=  %.2fC", celsius);
+     break;
+
+ case 'c':
+
+
+     fahr= (value* 9/5) + 32 ;
+     kelvin= value+273.15;
+     printf("\ncelsius %.0f C\n",value);
+     printf("fahr=  %.2f F\n",fahr);
+     printf("kelvin=  %.2f K", kelvin);
+     break;
+
+ case 'k':
+
+
+      fahr=(value - 273.15) * 9/5 + 32;
+      celsius=value-273.15;
+      printf("\nkelvin  %.0f K\n",value);
+      printf("fahr=  %.2f F\n",fahr);
+     printf("celsius=  %.2f C", celsius);
+     break;
+ default:
+      kelvin=(value- 32) * 5/9 + 273.15;
+     celsius=5*(value-32)/9;
+     printf("fahr  %.0f F\n",value);
+     printf("kelvin=  %.2fK\n",kelvin);
+     printf("celsius=  %.2fC\n\n", celsius);
+
+
+
+     fahr= (value* 9/5) + 32 ;
+     kelvin= value+273.15;
+     printf("celsius %.0f C\n",value);
+     printf("fahr=  %.2f F\n",fahr);
+     printf("kelvin=  %.2f K\n\n", kelvin);
+
+
+
+     fahr=(value - 273.15) * 9/5 + 32;
+      celsius=value-273.15;
+      printf("kelvin  %.0f K\n",value);
+      printf("fahr=  %.2f F\n",fahr);
+     printf("celsius=  %.2f C\n\n", celsius);
+
+
+     break;
+
+     }
+
+    return 0;
+}
